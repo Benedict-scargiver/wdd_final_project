@@ -1,11 +1,11 @@
 {
-  "name": "final-project-wdd",
+  "name": "wdd_final_project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm install && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
