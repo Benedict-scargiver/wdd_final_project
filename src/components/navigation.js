@@ -2,7 +2,7 @@ export function renderNavigation() {
     return `
       <nav class="navigation">
         <div class="nav-brand">Benny Books</div>
-        <small>api by: themoviesdb.org</small>
+        <small>api by: www.dbooks.org</small>
         <div class="nav-links">
           <a href="#" class="nav-link" data-page="home">Home</a>
           <a href="#" class="nav-link" data-page="wishlist">Wishlist</a>
