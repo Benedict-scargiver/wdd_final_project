@@ -4,9 +4,9 @@ export function showBookDetails(book) {
       <div class="modal-overlay" role="dialog" aria-modal="true" aria-label="${book?.title ?? 'Details'}">
         <div class="book-details-modal" tabindex="-1">
           <img src="${book.image}" alt="${book.title}" style="width:100%;border-radius:8px;">
-          <h2>${book.title} (${book.year})</h2>
-          <p>Rating: ⭐ ${book.rating}</p>
-          <p>${book.description}</p>
+          <h2>${book.title} (${book.subtitle})</h2>
+          <p>Rating: ⭐ ${book.url}</p>
+          <p>${book.authors}</p>
           <button class="close-modal">Close</button>
         </div>
       </div>

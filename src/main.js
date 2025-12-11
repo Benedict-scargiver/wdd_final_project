@@ -39,7 +39,7 @@ async function initializeApp() {
     console.error('Failed to initialize app:', error);
     document.querySelector('#app').innerHTML = `
       <div class="error">
-        <h2>Failed to load movies</h2>
+        <h2>Failed to load BookS</h2>
         <p>Please try again later</p>
       </div>
     `;
@@ -103,12 +103,16 @@ function setupNavigationListeners() {
 }
 
 export function renderBookCard(book) {
+  console.log(book) 
   const isInWishlist = wishlistService.isInWishlist(book.id);
   return `
     <div class="book-card" data-id="${book.id}">
-      <img src="${book.image}" alt="${book.title}">
+    <a href="${book.url}" target="_blank" rel="noopener noreferrer"><img src="${book.image}" alt="${book.title}"></a>
       <h3>${book.title}</h3>
-      <p>${book.year} • ⭐ ${book.rating}</p>
+      <p class="year-rating">${book.subtitle}</p>
+      <p class="url">
+      <a href="${book.url}" target="_blank" rel="noopener noreferrer">${book.authors}</a>
+      </p>
       <button class="wishlist-btn ${isInWishlist ? 'added' : ''}" data-id="${book.id}">
         ${isInWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'}
       </button>
