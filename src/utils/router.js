@@ -38,6 +38,11 @@ export class Router {
       }
   
       const view = await route.view(params);
-      document.querySelector('#content').innerHTML = view;
+      const container = document.querySelector('#content');
+      if (!container) {
+        console.error('Router: container "#content" not found. Ensure index.html contains <div id="content"></div> or delay router init.');
+        return;
+      }
+      container.innerHTML = view;
     }
   }
